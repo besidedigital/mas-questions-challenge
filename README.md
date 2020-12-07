@@ -134,7 +134,7 @@ Content-Length: 116
 }
 ```
 
-More information can be found in the yaml here : [api_spec.yaml](../main/api_spec_yaml)
+More information can be found in the yaml here : [api_spec.yaml](../main/api_spec.yaml)
 
 
 
