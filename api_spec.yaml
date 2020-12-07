@@ -1,0 +1,82 @@
+swagger: '2.0'
+
+info:
+  version: 1.0.0
+
+  title: question-toy
+
+  description: |
+
+    #### Echos back every URL, method, parameter and header
+
+    A simple server that server a list of questions.
+
+
+schemes:
+
+  - https
+
+host: question-toy-server.herokuapp.com
+
+basePath: /api
+
+paths:
+
+  /questions:
+
+    get:
+      summary: Returns a list of quetions
+        200:
+          description: OK
+    post:
+      summary: Create a new question record
+      consumes :
+        - application/json
+      parameters:
+        -in :body
+          description: the question object to create
+          type : object
+          required:
+            - firstName
+            - lastName
+            - content
+          properties:
+            firstName :
+              type: string
+              description : the first name of the asker
+            lastName :
+              type: string
+              description : the last name of the asker
+            content :
+              type: string
+              description : the content of the question
+
+      responses :
+        200:
+          description: The created object
+          type : object
+
+        422 :
+          description: Missing required parameter
+  
+
+definitions:
+  Question:
+    properties:
+      _id:
+        type: string
+      firstName:
+        type: string
+      lastName :
+        type : string
+      content :
+        type: string
+      timestamp :
+        type: Date
+
+    # Both properties are required
+    required:  
+      - id
+      - firstName
+      - lastName
+
