@@ -35,7 +35,6 @@ The goal of this project is to build a simple “question submission” module t
 # **Api Documentation** #
 
 ## Quick Start ##
----
 
 We’ve created a simple TOY api for you to play with. It’s located here:
 
@@ -104,7 +103,6 @@ $ curl https://question-toy-server.herokuapp.com/api/questions | jq
 
 
 ## Api Endpoints ##
----
 The Api exposes two endpoints. They are:
 
 ## GET /api/questions. ##
@@ -121,7 +119,6 @@ The Api exposes two endpoints. They are:
     * The content of the question
 
 ## Posting A Record ##
----
 The Api will consume a json object in the body of the request. A simple HTTP request to the API might look like:
 
 ```http
